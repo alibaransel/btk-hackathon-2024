@@ -9,9 +9,13 @@ load_dotenv()
 outcomes = list_of_outcomes()
 
 
+class Scene(typing.TypedDict):
+    image_prompt: str  # The prompt for the image generation of the scene
+    scene_text: str  # The text content of the scene
+
+
 class Story(typing.TypedDict):
-    story_scenes: list[str]
-    prompts_for_each_scene_image: list[str]
+    story_scenes_and_image_prompts: list[Scene]
     outcome: str
 
 
