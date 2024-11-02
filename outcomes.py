@@ -2,7 +2,7 @@ import pandas as pd
 
 
 def list_of_outcomes():
-    df = pd.read_csv("c1u1.csv")
+    df = pd.read_csv("outcomes.csv")
 
     df.fillna(value=0, inplace=True)
 
